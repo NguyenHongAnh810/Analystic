@@ -14,7 +14,7 @@ import RenderTransportation from '../../../components/RenderTransportation';
 const height = Dimensions.get('screen').height;
 const width = Dimensions.get('screen').width;
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <SafeAreaView
       style={{
@@ -44,7 +44,7 @@ export default function Home() {
       <View>
         {/* <Text>Your wallet</Text> */}
       </View>
-      <RenderTransportation/>  
+      <RenderTransportation navigation = {navigation}/>  
       </View>
     </SafeAreaView>
   );

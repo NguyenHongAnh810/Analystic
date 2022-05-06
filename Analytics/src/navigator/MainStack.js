@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import MainButtonTabStack from './MainButtonTabStack';
+import Map from '../screen/Main/map/Map.js'
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ const MainStack = () => {
           headerShown: false,
         }}>
         <Stack.Screen name="HomeTabs" component={MainButtonTabStack} />
+        <Stack.Screen name="Map" component={Map} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -2,16 +2,13 @@ import {View, Text, StyleSheet, FlatList, Image, TouchableOpacity} from 'react-n
 import React from 'react';
 import {DataType} from '../utils/Service';
 
-// const Item = ({title}) => (
-//   <View style={styles.item}>
-//     <Text style={styles.title}>{title.name}</Text>
-//   </View>
-// );
-
-export default function RenderTransportation() {
+export default function RenderTransportation({navigation}) {
+  const inToMap = () => {
+    navigation.navigate('Map')
+  }
   const renderItem = ({item}) => {
     return (
-      <TouchableOpacity style={styles.item}>
+      <TouchableOpacity style={styles.item} onPress = {inToMap}>
         <View
           style={{
             width: '80%',
